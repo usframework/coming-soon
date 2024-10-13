@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+
+}   *::selection {
+    background-color: rgba(1, 207, 228, .4)
+
+}   a {
+    text-decoration: none;
+    user-select: none;
+
+}    body {
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    width: 100;
+    height: 100svh;
+
+    background-color: #0e0e0e;
+
+}   main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #0e0e0e;
+    background-image: url(../img/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+
+
+}   main article {
+    position: relative;
+
+    width: 500px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: rgba(7, 166, 250, .25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+
+    padding: 50px;
+
+}   main article h1 {
+    color: #ffffff;
+    font-size: 45px;
+    text-align: center;
+
+}   main article p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+
+}   main article a.contact {
+    position: absolute;
+    bottom: 50px;
+    left: calc(50% - 75px);
+
+    width: 150px;
+    text-align: center;
+
+    padding: 10px;
+    background-color: #01ffff;
+    border-radius: 20px;
+
+    color: #2600ff;
+
+    transition: .3s ease-out;
+
+}   main article a.contact:hover {
+    transform: translateY(-5px);
+
+}   main article .countdown {
+    user-select: none;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+}   main article .countdown span.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+
+    width: 50px;
+    height: 50px;
+
+}   main article .countdown span.block span.number {
+    font-size: 25px;
+    color: #ffffff;
+
+}   main article .countdown span.block span.desc {
+    font-size: 10px;
+    color: #ffffff;
+
+}
+
+.contact-us {
+    position: fixed;
+    top: calc(50% - 225px);
+    left: calc(50% - 250px);
+
+    width: 500px;
+    height: 450px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    background-color: #01ffff;
+
+    transition: .3s ease-out;
+    transform-origin: center;
+    transform: translateY(100px);
+    z-index: -1;
+    opacity: 0;
+
+}   .contact-us.show {
+    transform: translateY(0);
+    z-index: 1000;
+    opacity: 1;
+
+}   .contact-us span {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 300px;
+
+}   .contact-us span p {
+    font-size: 20px;
+    color: #0e0e0e;
+
+    width: 90px;
+    padding: 5px;
+
+    user-select: none;
+
+}   .contact-us span a {
+    color: #2600ff;
+    font-size: 18px;
+    
+}   .contact-us i.close {
+    user-select: none;
+    cursor: pointer;
+    font-size: 45px;
+    color: #0e0e0e;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media only screen and (max-width: 520px) {
+    main article {
+        width: 95%;
+
+    }   .contact-us {
+        width: 95%;
+        left: 2.5%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    main article h1 {
+        font-size: 30px;
+
+    }
+}
